@@ -1,0 +1,420 @@
+.testimonial-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #fffdf8 0%, #fffaf0 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #5f2c82;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 5px; */
+  padding: 40px 0;
+
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+  width: 340px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0.6;
+  transform: scale(0.9);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card.center-card {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(95, 44, 130, 0.2);
+  height: 460px;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7f53ac, #647dee);
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-card.center-card::before {
+  opacity: 1;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 25px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: left;
+  font-weight: 900;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+}
+
+.review-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #647dee;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.review-button:hover {
+  background: rgba(100, 125, 238, 0.1);
+}
+
+.review-button img {
+  width: 16px;
+  height: 16px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto;
+  text-align: left;
+  background-color: #f59e9e;
+  border-radius: 34px;
+  color: white;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.author-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.author-name {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.author-role {
+  margin: 5px 0 0;
+  color: #647dee;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.control-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.control-dot.active {
+  background: #7f53ac;
+  transform: scale(1.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    width: 300px;
+    height: 380px;
+  }
+
+  .testimonial-card.center-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    gap: 15px;
+  }
+
+  .testimonial-card {
+    width: 280px;
+    padding: 20px;
+  }
+
+  .testimonial-text {
+    -webkit-line-clamp: 6;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-section {
+    padding: 60px 15px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-track {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-card.center-card {
+    transform: scale(1) !important;
+    height: auto;
+  }
+}
+
+/* Updated Testimonial.css */
+
+/* Mobile Carousel Styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    padding: 1rem 0;
+  }
+
+  .testimonial-card-wrapper {
+    flex: 0 0 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    opacity: 1;
+    transform: scale(1);
+    height: auto;
+    min-height: 380px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Animation for active card */
+  .testimonial-card.active {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Navigation controls for mobile */
+  .carousel-controls {
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .control-dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    transition: all 0.3s ease;
+  }
+
+  .control-dot.active {
+    background: #7f53ac;
+    transform: scale(1.3);
+  }
+
+  /* Add navigation arrows for mobile */
+  .carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .carousel-nav button {
+    pointer-events: all;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-nav button:hover {
+    background: white;
+  }
+
+  .carousel-nav button svg {
+    width: 20px;
+    height: 20px;
+    fill: #7f53ac;
+  }
+
+  /* Animation classes */
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOutLeft {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOutRight {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.5s forwards;
+  }
+
+  .slide-out-left {
+    animation: slideOutLeft 0.5s forwards;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.5s forwards;
+  }
+
+  .slide-out-right {
+    animation: slideOutRight 0.5s forwards;
+  }
+}

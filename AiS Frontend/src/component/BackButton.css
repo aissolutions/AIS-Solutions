@@ -1,0 +1,21 @@
+.back-button:hover {
+  scale: 1.05;
+  transition: scale 0.6s, background-color 0.6s;
+  background-color: rgb(217, 76, 0);
+  color: rgb(0, 0, 0);
+}
+
+.back-button {
+  background-color: rgb(255, 149, 0);
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  position: relative;
+  display: flex;
+margin-left: 90%;
+
+}
+
+.back-button img{
+  height: 30px;
+  width: 30px;
+}

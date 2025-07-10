@@ -1,0 +1,119 @@
+/* Footer.css - Mobile-First Responsive Design */
+
+/* ================= Base Styles (Mobile First) ================= */
+
+.tutedude-footer-section1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin-top: 90px;
+  background: rgba(66, 158, 195, 0.818);
+  width: 100%;
+}
+
+.tutedude-footer-mainlink-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1.5rem; */
+}
+.tutedude-footer-link > img {
+  height: 30px;
+  width: 30px;
+}
+
+.tutedude-footer-logo {
+  width: 110px;
+  height: auto;
+}
+
+.tutedude-footer-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-align: start;
+  display: block;
+  margin: 0.5rem 0.5rem;
+}
+
+.tutedude-footer-social-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tutedude-footer-social-section img {
+  width: 30px;
+  height: 30px;
+}
+
+.tutedude-footer-registered-section {
+  text-align: start;
+}
+
+.tutedude-footer-link-head {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.tutedude-footer-contact-section {
+  margin-top: 1.5rem;
+}
+
+.tutedude-footer-contact-section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact {
+  display: flex;
+  gap: 10px;
+  font-size: 1.1rem;
+  align-items: center;
+}
+
+/* ================= Tablet Styles (min-width: 600px) ================= */
+
+/* ================= Small Mobile Devices (max-width: 375px) ================= */
+@media (max-width: 499px) {
+  .contact-map {
+    height: 350px;
+  }
+  .tutedude-footer-social-section {
+    display: flex;
+    gap: 5px;
+  }
+
+  .tutedude-footer-logo {
+    height: 80px;
+    /* width: 10px; */
+  }
+  .tutedude-footer-link {
+    font-size: 0.9rem;
+  }
+  .tutedude-footer-mainlink-section {
+    margin: 0;
+    padding: 0px 10px;
+  }
+
+  .tutedude-footer-link-head {
+    font-size: 1.1rem;
+  }
+  .tutedude-footer-section1 {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .tutedude-footer-registered-section {
+    padding: 15px 0px;
+  }
+  .tutedude-footer-contact-section {
+    padding: 0;
+    margin: 0;
+  }
+}

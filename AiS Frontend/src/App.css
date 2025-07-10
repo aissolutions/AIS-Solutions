@@ -1,0 +1,17 @@
+.ref-new-backoffer {
+  /* background: linear-gradient(
+    90deg,
+    #5f2c82 0%,
+    #f8f8ff 40%,
+    #f8f8ff 60%,
+    #5f2c82 100%
+  ); */
+  background: #f59e9e;
+  padding: 40px 0;
+  border-radius: 32px;
+}
+
+.ref-new-backoffer-right-inner {
+  background-color: white;
+  color: black;
+}

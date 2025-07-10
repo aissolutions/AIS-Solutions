@@ -1,0 +1,175 @@
+/* Founder.css */
+.founder-container {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  margin: auto;
+
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+.founder {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.founder > h1 {
+  font-size: 2.3rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin: 40px 0px;
+}
+
+.founder-text {
+  order: 1;
+  max-width: 100%;
+}
+
+.founder-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.founder-text .highlight {
+  color: #4f6cf6;
+}
+
+.founder-text p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.founder-image {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.background-img {
+  position: absolute;
+  height: 350px;
+  width: 60%;
+  left: 15%;
+  bottom: 10%;
+}
+
+.rotating-img {
+  z-index: 100;
+  position: absolute;
+  height: 350px;
+  width: 55%;
+  right: 33%;
+  bottom: 10%;
+}
+.lining {
+  height: 1px;
+  width: 90%;
+  background-color: black;
+  box-shadow: 0px 0px 10px black;
+}
+
+.web > img {
+  height: 25px;
+  width: 30px;
+}
+
+.lining-main {
+  height: 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.founder-name > h2 {
+  margin: 10px 0px;
+  font-weight: 900;
+}
+.founder-name > span {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+/* Social links styles */
+.founder-text nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  margin-top: 20px;
+}
+
+.founder-text nav a {
+  color: #4361ee;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #dbe2ff;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.founder-text nav a:hover {
+  background-color: #4361ee;
+  color: #fff;
+}
+
+/* Tablet and larger mobile devices */
+
+/* Desktop */
+
+/* Very small mobile devices */
+@media (max-width: 499px) {
+  .founder-text h1 {
+    font-size: 24px;
+  }
+
+  .founder-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .founder-text p {
+    font-size: 15px;
+  }
+
+  .founder-image {
+    height: 250px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .highlight {
+    display: flex;
+  }
+
+  .background-img {
+    height: 200px;
+  }
+
+  .rotating-img {
+    height: 250px;
+  }
+}

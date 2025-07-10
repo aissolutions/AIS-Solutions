@@ -1,0 +1,99 @@
+.floating-space-card {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 460px;
+  background: #10101a;
+  border-radius: 32px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.floating-space-star {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-tech {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transition: filter 0.2s;
+}
+
+.floating-tech-img-wrap {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #181828;
+  box-shadow: 0 0 16px 4px #fff3, 0 0 32px 8px #fff1,
+    0 2px 12px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  transition: box-shadow 0.2s;
+}
+
+.floating-tech-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.floating-tech:hover .floating-tech-img-wrap {
+  box-shadow: 0 0 0 6px #fff6, 0 0 32px 12px #fff2,
+    0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.floating-tech-tooltip {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: -90px;
+  transform: translateX(-50%);
+  min-width: 180px;
+  background: rgba(30, 30, 40, 0.98);
+  color: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  font-size: 1rem;
+  z-index: 10;
+  pointer-events: none;
+  white-space: pre-line;
+}
+
+.floating-tech:hover .floating-tech-tooltip {
+  display: block;
+  animation: fadeInTooltip 0.18s;
+}
+
+@keyframes fadeInTooltip {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.floating-tech-tooltip-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.floating-tech-tooltip-desc {
+  font-size: 0.98rem;
+  color: #e0e0e0;
+}

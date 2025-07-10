@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ais-solution-pune.vercel.app/sitemap.xml

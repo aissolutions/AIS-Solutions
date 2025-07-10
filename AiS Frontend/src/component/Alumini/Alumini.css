@@ -1,0 +1,397 @@
+/* Section and Title */
+.alumini-section {
+  padding: 48px 0 32px 0;
+  background: linear-gradient(120deg, #f1e6e3 60%, #ffc68f 100%);
+  text-align: center;
+}
+.alumini-title {
+  font-size: 2.2rem;
+  margin-bottom: 36px;
+  color: #5f2c82;
+  letter-spacing: 0.03em;
+  font-weight: 800;
+}
+
+/* Carousel Outer */
+.alumini-carousel-outer {
+  overflow: hidden;
+  width: 100%;
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Carousel Inner Animation */
+.alumini-carousel-inner {
+  display: flex;
+  gap: 32px;
+  animation: alumni-scroll 32s linear infinite;
+  width: max-content;
+  align-items: stretch;
+}
+@keyframes alumni-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Stylish Card */
+.stylish-card {
+  background: linear-gradient(120deg, #f8f8ff 60%, #e0e7ff 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(100, 125, 222, 0.13);
+  padding: 18px 22px;
+  width: 340px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 100%; */
+  align-items: flex-start;
+  /* border-left: 6px solid #7f53ac; */
+  transition: box-shadow 0.22s, transform 0.22s;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.stylish-card > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stylish-card::before {
+  content: "";
+  position: absolute;
+  inset: -2.5px;
+  border-radius: 24px;
+  padding: 2.5px;
+  background: linear-gradient(135deg, #7f53ac, #647dee, #27ae60, #f7971e);
+  background-size: 200% 200%;
+  animation: border-anim 4s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+@keyframes border-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Image Styling */
+.alumini-img-wrapper {
+  padding: 4px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  user-select: none;
+}
+.alumini-img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  display: block;
+  box-shadow: 0 0 10px #522b01;
+  background: linear-gradient(135deg, #53aca9 40%, #0088ff 100%);
+}
+
+/* Info Styling */
+.alumini-info {
+  flex: 1;
+  text-align: center;
+  margin-top: 20px;
+  justify-content: end;
+  padding: 0;
+  gap: 20px;
+}
+.alumini-info h3 {
+  margin: 0 0 6px 0;
+  color: #5f2c82;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.alumini-position {
+  color: #647dee;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.01rem;
+}
+.alumini-testimonial {
+  font-size: 0.97rem;
+  color: #444;
+  font-style: italic;
+  background: transparent;
+  padding: 10px 12px 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px #7f53ac11;
+  margin-bottom: 0;
+  line-height: 1.5;
+  min-height: 60px;
+}
+
+/* Card Hover/Active */
+.stylish-card:hover,
+.stylish-card:active {
+  box-shadow: 0 12px 36px 0 #7f53ac55, 0 2px 16px 0 #647dee33;
+  transform: scale(1.045);
+  z-index: 2;
+  /* transition: box-shadow 0.22s, transform 0.22s; */
+}
+/* Add fade-up animation to each card */
+.stylish-card {
+  /* ...existing styles... */
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: alumni-fadeup 0.7s cubic-bezier(0.4, 1.6, 0.6, 1) forwards;
+}
+
+.stylish-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stylish-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stylish-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stylish-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stylish-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stylish-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.stylish-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.stylish-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+@keyframes alumni-fadeup {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* Add to Alumini.css */
+.alumini-logo-center {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 16px;
+}
+
+.alumini-logo-img {
+  width: 50px;
+  height: 50px;
+  /* border-radius: 10px; */
+  box-shadow: 0 2px 8px #7f53ac22;
+  background: #fff;
+  object-fit: contain;
+}
+.alumini-position-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.alumini-logo-inline {
+  width: 123px;
+  height: 70px;
+  /* border-radius: 6px; */
+  object-fit: contain;
+  /* background: #fff; */
+  /* box-shadow: 0 1px 4px #7f53ac11; */
+}
+.alumini-carousel-inner {
+  display: flex;
+  gap: 32px;
+  animation: alumni-scroll 32s linear infinite;
+  width: max-content;
+  padding: 10px;
+  align-items: stretch;
+}
+
+@keyframes alumni-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Reverse scroll for the second slider */
+.reverse-scroll {
+  animation: alumni-scroll-reverse 32s linear infinite;
+}
+
+@keyframes alumni-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* For reverse scroll animation */
+.reverse-scroll {
+  animation: alumni-scroll-reverse 32s linear infinite;
+}
+@keyframes alumni-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.alumini-LPA {
+  font-size: 1rem;
+  color: #5f2c82;
+  font-weight: 600;
+  margin-left: 8px;
+  text-align: center;
+  background: #f8f8ff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(100, 125, 222, 0.13);
+}
+
+.grid-container {
+  width: 100%;
+  /* height: 100%; */
+  display: grid;
+  /* grid-template-rows: 50% 50%; */
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-container h3 {
+  display: block;
+}
+
+h3 {
+  display: block;
+}
+.names-div {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  /* border-left: 1px solid red; */
+}
+.names-div > h3 {
+  width: 50%;
+}
+
+.vertical {
+  height: 160px;
+  margin: auto;
+  /* margin: 10px; */
+  /* border: 1px solid rgb(118, 118, 118); */
+  box-shadow: 0px 0px 0.6px 0.5px rgb(0, 0, 0);
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .alumini-carousel-outer {
+    overflow: hidden;
+    width: 100%;
+    /* max-width: 1200px;
+  margin: 0 auto; */
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  /* Carousel Inner Animation */
+  .alumini-carousel-inner {
+    display: flex;
+    gap: 32px;
+    animation: alumni-scroll 32s linear infinite;
+    width: max-content;
+    align-items: stretch;
+  }
+
+  /* Stylish Card */
+  .stylish-card {
+    background: linear-gradient(120deg, #f8f8ff 60%, #e0e7ff 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(100, 125, 222, 0.13);
+    padding: 18px 22px;
+    /* width: 110px; */
+    height: 300px;
+    /* min-width: 280px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100%; */
+    align-items: flex-start;
+    /* border-left: 6px solid #7f53ac; */
+    transition: box-shadow 0.22s, transform 0.22s;
+    margin-bottom: 10px;
+    position: relative;
+    width: 50px;
+  }
+  .alumini-card-header {
+    height: 200px;
+  }
+  .alumini-img-wrapper {
+    margin: 0;
+  }
+
+  .alumini-info > h3 {
+    font-size: 1rem;
+  }
+  .alumini-img {
+    height: 60px;
+    width: 60px;
+  }
+  .alumini-logo-inlin {
+    height: 60px;
+    width: 60px;
+  }
+  .vertical {
+    height: 140px;
+  }
+  .reverse-scroll {
+    animation: alumni-scroll-reverse 32s linear infinite;
+  }
+
+  .stylish-card > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

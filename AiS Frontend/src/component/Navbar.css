@@ -1,0 +1,403 @@
+.logo-cont img {
+  height: 6rem;
+  width: 7rem;
+  padding: 0;
+  margin: 0;
+}
+.space {
+  padding: 0;
+  display: none;
+}
+span {
+  /* color: rgb(108, 45, 203); */
+  color: #000080;
+}
+
+h1 {
+  color: black;
+  font-weight: bold;
+  margin: 0;
+  font-size: 34px;
+  margin-top: 10px;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nav {
+  display: flex;
+  gap: 0;
+
+  margin: 0;
+  /* padding: 0; */
+  justify-content: flex-start;
+}
+
+.logo-cont {
+  margin-left: 5rem;
+  width: 100px;
+}
+
+@keyframes logo-pop {
+  0% {
+    transform: scale(0.7) rotate(-10deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1) rotate(4deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.logo-cont img {
+  height: 6rem;
+  width: 7rem;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: logo-pop 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s;
+}
+
+.logo-cont:hover img {
+  transform: scale(1.08) rotate(-6deg);
+}
+
+@keyframes title-slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 34px;
+  margin-top: 10px;
+  cursor: pointer;
+  animation: title-slide 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* ...existing styles... */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  justify-content: flex-start;
+  padding: 0 2vw;
+}
+
+.logo-cont {
+  margin-left: 0;
+  width: 270px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-cont img {
+  height: 3.5rem;
+  width: 3.5rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 2rem;
+  margin-top: 0;
+  animation: title-slide 1s cubic-bezier(0.4, 0, 0.2, 1);
+  word-break: break-word;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+  .nav {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0 1vw;
+  }
+  .logo-cont {
+    width: 56px;
+  }
+  .logo-cont img {
+    height: 2.5rem;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.2rem;
+    padding: 0 2vw;
+  }
+  .logo-cont {
+    margin-left: 0;
+    width: 40px;
+  }
+  .logo-cont img {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  h1 {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    display: flex;
+  }
+}
+
+.navname {
+  /* font-size: 2.4rem; */
+  font-weight: 700;
+  color: rgb(41, 140, 179);
+  text-shadow: 2px 2px 4px rgba(1, 1, 1, 0.1);
+}
+.logo-cont img {
+  height: 100px; /* Increase as needed */
+  width: 100px; /* Increase as needed */
+  margin-left: 80px; /* Move 50px to the right */
+}
+
+/* ================= Base Styles ================= */
+.home-navbar-outer-cont {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0 2vw;
+  margin: 0;
+}
+
+/* ================= Logo Container ================= */
+.logo-cont {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin-left: 2vw;
+}
+
+.logo-cont img {
+  height: 100px;
+  width: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: logo-pop 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Logo Hover Effect */
+.logo-cont:hover img {
+  transform: scale(1.08) rotate(-6deg);
+}
+
+/* ================= Title Styling ================= */
+h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-style: normal;
+  animation: title-slide 1s ease;
+  word-break: break-word;
+}
+
+/* Span Accent (AIS) */
+span.navname {
+  font-weight: 700;
+  color: rgb(41, 140, 179);
+  text-shadow: 2px 2px 4px rgba(1, 1, 1, 0.1);
+}
+
+.nav-hover-btn:before {
+  animation: glare 3s infinite;
+  background: #ffffffd5;
+  content: "";
+  height: 100%;
+  left: -135%;
+  mix-blend-mode: plus-lighter;
+  position: absolute;
+  top: 0;
+  transform: skew(-45deg);
+  transition: all 2s;
+  width: 30px;
+}
+
+.nav-hover-btn {
+  background: linear-gradient(7deg, #ff9b16 0%, #305078 100%);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  gap: 10px;
+  height: 3px;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  max-width: 370px;
+  overflow: hidden;
+  position: relative;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.nav-hover-btn2:before {
+  animation: glare 5s infinite;
+  background: #ffffffd5;
+  content: "";
+  height: 100%;
+  left: -135%;
+  mix-blend-mode: plus-lighter;
+  position: absolute;
+  top: 0;
+  transform: skew(-45deg);
+  transition: all 2s;
+  width: 30px;
+}
+
+.nav-hover-btn2 {
+  background: linear-gradient(7deg, #ffc011 0%, #305078 100%);
+  border-radius: 5px;
+  /* color: #861616; */
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  gap: 10px;
+  height: 3px;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  /* max-width: 370px; */
+  overflow: hidden;
+  position: relative;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+/* ================= Animations ================= */
+@keyframes logo-pop {
+  0% {
+    transform: scale(0.7) rotate(-10deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1) rotate(4deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes title-slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= Tablet (max-width: 800px) ================= */
+@media (max-width: 800px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 3vw;
+  }
+
+  .logo-cont img {
+    height: 70px;
+    width: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    margin-left: 0;
+  }
+  .nav-hover-btn {
+    height: 1.5px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+}
+
+/* ================= Mobile (max-width: 500px) ================= */
+@media (max-width: 500px) {
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 4vw;
+  }
+
+  .logo-cont {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .logo-cont img {
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+  .nav-name {
+    width: auto;
+  }
+
+  .nav-name > h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .space {
+    display: block;
+    padding: 5px;
+  }
+  .nav-hover-btn {
+    height: 1.5px;
+  }
+}
