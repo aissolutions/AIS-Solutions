@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./ComboPack.css";
 import { useNavigate } from "react-router-dom";
 
@@ -61,7 +61,7 @@ const ComboCardSlider = ({
         <div className="combo-bottom">
           <div className="afternoon-bottom-validity">
             <div className="afternoon-bottom-validity-para">
-              <p
+              <div
                 style={{
                   color: "rgb(51 1 8)",
                   margin: 10,
@@ -71,7 +71,7 @@ const ComboCardSlider = ({
                 }}
               >
                 Bonus Courses
-              </p>
+              </div>
               {extraBenefits.map((item) => (
                 <span className="afternoon-card-company" key={item.id}>
                   <span className="afternoon-card-company-img">
@@ -84,7 +84,7 @@ const ComboCardSlider = ({
               ))}
             </div>
           </div>
-          <p
+          <div
             className="afternoon-bottom-know pointer"
             onMouseEnter={() => setShow(comboKey)}
           >
@@ -94,7 +94,7 @@ const ComboCardSlider = ({
             </div>
 
             {/* <p>See Discounted Price</p> */}
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -105,9 +105,15 @@ const ComboCardSlider = ({
       }`}
       onMouseLeave={() => setShow(null)}
     >
-      <div class={`firework hide ${show === comboKey ? "show" : "hide"}`}></div>
-      <div class={`firework hide ${show === comboKey ? "show" : "hide"}`}></div>
-      <div class={`firework hide ${show === comboKey ? "show" : "hide"}`}></div>
+      <div
+        className={`firework hide ${show === comboKey ? "show" : "hide"}`}
+      ></div>
+      <div
+        className={`firework hide ${show === comboKey ? "show" : "hide"}`}
+      ></div>
+      <div
+        className={`firework hide ${show === comboKey ? "show" : "hide"}`}
+      ></div>
       <div className="afternoon-card-top btn-back-white ">
         <div className="afternoon-card-main-img">
           <img src={mainImg} alt={mainTitle} />
@@ -146,7 +152,7 @@ const ComboCardSlider = ({
           className="combo-slider-middle-bottom"
           onClick={() => setShow(null)}
         >
-          <p
+          <div
             className="afternoon-bottom-know pointer"
             style={{ backgroundColor: "white", color: "black" }}
           >
@@ -154,7 +160,7 @@ const ComboCardSlider = ({
               Total: &nbsp; <div className="combo-total-hover">{total}</div>/-
             </span>
             <b>Price After Discount {discount}/-</b>
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -298,7 +304,7 @@ const ComboPack = () => {
           window.scrollTo({ top: 0, behavior: "smooth" });
           navigate("/customize");
         }}
-      > 
+      >
         <p className="afternoon-bottom-know pointer">
           <b>Customize Your Pack here</b>
         </p>

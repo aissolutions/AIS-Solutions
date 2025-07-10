@@ -2,12 +2,8 @@ import { useEffect, useRef, useState } from "react";
 
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
-import CourseContent from "./CourseContent";
 import ComboPack from "./ComboPack";
-import { Link } from "react-router-dom";
-import FloatingTechSpace from "./FloatingTechSpace";
 import LollipopBarChart from "./LollipopBarChart";
-import { Helmet } from "react-helmet";
 import Testimonial from "./Testimonial";
 import Faq from "./Faq";
 import FloatingSettings from "./Socials/FloatingSettings";
@@ -417,7 +413,7 @@ const Home = () => {
             <div className="home-hero-main-cont">
               <div className="home-hero-main-top">
                 <div className="home-hero-left">
-                  <h1 className="home-hero-head">
+                  <div className="home-hero-head">
                     <p className="home-hero-head-col">
                       {/* <img
                         src="https://storage.googleapis.com/test694/Images/levelup.webp"
@@ -427,8 +423,7 @@ const Home = () => {
                     </p>
 
                     <h2 className="hero-text">
-                     Kickstart your career  with AIS 
-                      In the world of <br />
+                      Kickstart your career with AIS In the world of <br />
                       <div className="dynamic">
                         <span className="highlight extra-bold slide-fade">
                           <Type />
@@ -437,7 +432,7 @@ const Home = () => {
                       </div>
                       {/* with <strong>AIS</strong> */}
                     </h2>
-                  </h1>
+                  </div>
                   {/* <div className="home-hero-text">
                     <span className="title"> Together we achieve more...</span>
                   </div> */}
@@ -548,8 +543,8 @@ const Home = () => {
                   Browse our Courses
                 </div>
                 <div className="home-wu-text">
-                Start your learning journey with courses that are Engaging, Simple and Effective.
-            
+                  Start your learning journey with courses that are Engaging,
+                  Simple and Effective.
                 </div>
               </div>
               <div className="bc-mid-parent">

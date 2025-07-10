@@ -32,11 +32,9 @@ const Navbar = () => {
             <span className="navname">I</span>n
             <span className="navname">S</span>ights
           </h1>
-          {/* <div className="nav-hover-btn"></div> */}
         </div>
-        
       </div>
-        <div className="nav-hover-btn2"></div>
+      <div className="nav-hover-btn2"></div>
     </div>
   );
 };

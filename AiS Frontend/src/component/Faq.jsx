@@ -22,10 +22,10 @@ const Faq = () => {
             <div>
               <div className="quesDiv">
                 <p onClick={() => setInfo(info === "first" ? "" : "first")}>
-                  <div className="ques">
+                  <span className="ques">
                     I’m from a non-technical background. Can I learn Python or
                     Data Science?
-                  </div>
+                  </span>
                   <span className="plus">{info === "first" ? "-" : "+"}</span>
                 </p>
                 <div className={`ans ${info === "first" ? "show" : "hide"}`}>
@@ -94,16 +94,16 @@ const Faq = () => {
             <div>
               <div className="quesDiv">
                 <p onClick={() => setInfo(info === "five" ? "" : "five")}>
-                  <div className="ques">
+                  <span className="ques">
                     Boosting Confidence Through Mock Interviews ?
-                  </div>
+                  </span>
                   <span className="plus">{info === "five" ? "-" : "+"}</span>
                 </p>
                 <div className={`ans ${info === "five" ? "show" : "hide"}`}>
                   <h4 className="ifaq-ans">
-                    We simulate real interview conditions, helping you
-                    practice answers, reduce nervousness and receive expert
-                    feedback to improve.
+                    We simulate real interview conditions, helping you practice
+                    answers, reduce nervousness and receive expert feedback to
+                    improve.
                   </h4>
                 </div>
               </div>
@@ -111,13 +111,17 @@ const Faq = () => {
             <div>
               <div className="quesDiv">
                 <p onClick={() => setInfo(info === "six" ? "" : "six")}>
-                  <span className="ques">Are there any activities to improve tech skills, like quizzes or challenges?</span>
+                  <span className="ques">
+                    Are there any activities to improve tech skills, like
+                    quizzes or challenges?
+                  </span>
                   <span className="plus">{info === "six" ? "-" : "+"}</span>
                 </p>
                 <div className={`ans ${info === "six" ? "show" : "hide"}`}>
                   <h4 className="ifaq-ans">
-                   Yes! We offer regular quizzes, coding challenges 
-                   and interactive assignments to help reinforce your technical knowledge and keep you sharp.
+                    Yes! We offer regular quizzes, coding challenges and
+                    interactive assignments to help reinforce your technical
+                    knowledge and keep you sharp.
                   </h4>
                 </div>
               </div>
