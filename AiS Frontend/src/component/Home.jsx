@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
@@ -409,6 +410,20 @@ const Home = () => {
     <>
       <div id="root">
         <div>
+          <Helmet>
+            <title>
+              Home | AIS Solutions - AI, ML, Data Science & Internships in Pune
+            </title>
+            <meta
+              name="description"
+              content="AIS Solutions offers industry-driven courses and internships in AI, ML, Data Science, and related tools like Python, Power BI, Tableau, SQL in Pune."
+            />
+            <meta
+              name="keywords"
+              content="AI courses Pune, ML internship, Data Science classes, Python, SQL, Power BI, Tableau, AIS Solutions, applied insights"
+            />
+            <link rel="canonical" href="https://appliedinsights.in/" />
+          </Helmet>
           <div className="home-hero-cont">
             <div className="home-hero-main-cont">
               <div className="home-hero-main-top">
@@ -423,7 +438,12 @@ const Home = () => {
                     </p>
 
                     <h2 className="hero-text">
-                      Kickstart your career with AIS <div className="mobileview"> <br /></div> In the world of <br />
+                      Kickstart your career with AIS{" "}
+                      <div className="mobileview">
+                        {" "}
+                        <br />
+                      </div>{" "}
+                      In the world of <br />
                       <div className="dynamic">
                         <span className="highlight extra-bold slide-fade">
                           <Type />

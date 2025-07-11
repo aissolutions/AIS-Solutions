@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import "./Customize.css";
 import emailjs from "@emailjs/browser"; // Make sure this is installed
@@ -253,6 +254,14 @@ const Customize = () => {
   return (
     <>
       <section className="ctm-pack-section ctm-pack-course-section" id="choose">
+        <Helmet>
+          <title>Customize Your Learning | AIS Solutions</title>
+          <meta
+            name="description"
+            content="Customize your AI, Data Science and ML training path at AIS Solutions."
+          />
+        </Helmet>
+        ;
         <h2 className="ctm-pack-f-48 ctm-pack-fw-400 ctm-pack-text-black ctm-pack-text-center">
           Choose{" "}
           <span className="ctm-pack-fw-700 ctm-pack-text-pink">
