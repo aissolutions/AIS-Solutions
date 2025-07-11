@@ -522,6 +522,9 @@ span {
   opacity: 1;
   pointer-events: auto;
 }
+.mobileview{
+    display: none;
+  }
 
 .fab-menu.open .fab-action-btn:nth-child(1) {
   transform: translateY(-60px) scale(1);
@@ -662,6 +665,10 @@ span {
     font-size: 1.34rem;
   }
 
+  .mobileview{
+    display: block;
+    height: 0;
+  }
   .home-wu-pointer {
     width: 80%;
     text-align: center;
@@ -712,7 +719,12 @@ span {
   .hero-text {
     font-size: 1.6rem;
     width: 100%;
+    margin-top: 50px;
     margin-bottom: 50px;
+  }
+  .mobileview{
+    display: block;
+    height: 0;
   }
   .highlight > span {
     width: 100%;
