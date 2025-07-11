@@ -423,7 +423,7 @@ const Home = () => {
                     </p>
 
                     <h2 className="hero-text">
-                      Kickstart your career with AIS In the world of <br />
+                      Kickstart your career with AIS <div className="mobileview"> <br /></div> In the world of <br />
                       <div className="dynamic">
                         <span className="highlight extra-bold slide-fade">
                           <Type />
@@ -555,7 +555,7 @@ const Home = () => {
                     }`}
                     onClick={() => setActiveCard("a")}
                   >
-                    Data Science
+                    Courses
                   </button>
                   {/* <button
                     className={`bc-mid-chip pointer hoverbtn ${
