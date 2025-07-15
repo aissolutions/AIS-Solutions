@@ -204,29 +204,8 @@
   }
 }
 
-/* Larger Tablet Styles */
-@media (min-width: 768px) {
-  .ctm-pack-course-div {
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
 
-    margin: auto;
-    align-items: center;
-    align-content: center;
-    gap: 1.5rem;
-  }
-
-  .ctm-pack-course-card-div {
-    padding: 0;
-    margin: auto;
-    padding: 20px;
-  }
-
-  .ctm-pack-ccdl-right {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 400px) {
+@media (max-width: 499px) {
   .ctm-pack-course-card-div {
     display: flex;
     flex-direction: column;
@@ -234,7 +213,6 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    padding: 0;
   }
   .ctm-pack-ccdr-right {
     margin: auto;
