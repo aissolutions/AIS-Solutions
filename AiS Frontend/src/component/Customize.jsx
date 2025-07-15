@@ -72,36 +72,31 @@ const Customize = () => {
       url: "/course logo/description.png",
       price: 10000,
     },
-    {
-      id: 12,
-      courseName: "HTML",
-      url: "/course logo/html.png",
-      price: 10000,
-    },
-    {
-      id: 13,
-      courseName: "CSS",
-      url: "/course logo/css.png",
-      price: 10000,
-    },
-    {
-      id: 14,
-      courseName: "Java Script",
-      url: "/course logo/js.png",
-      price: 10000,
-    },
-    {
-      id: 15,
-      courseName: "React JS",
-      url: "/course logo/react.png",
-      price: 10000,
-    },
-    {
-      id: 16,
-      courseName: "Spring Boot",
-      url: "/course logo/spring.png",
-      price: 10000,
-    },
+
+    // {
+    //   id: 13,
+    //   courseName: "CSS",
+    //   url: "/course logo/css.png",
+    //   price: 10000,
+    // },
+    // {
+    //   id: 14,
+    //   courseName: "Java Script",
+    //   url: "/course logo/js.png",
+    //   price: 10000,
+    // },
+    // {
+    //   id: 15,
+    //   courseName: "React JS",
+    //   url: "/course logo/react.png",
+    //   price: 10000,
+    // },
+    // {
+    //   id: 16,
+    //   courseName: "Spring Boot",
+    //   url: "/course logo/spring.png",
+    //   price: 10000,
+    // },
     {
       id: 17,
       courseName: "mySQL",
@@ -120,12 +115,12 @@ const Customize = () => {
       url: "/course logo/dataanalyst.png",
       price: 10000,
     },
-    {
-      id: 20,
-      courseName: "Web Developer",
-      url: "/course logo/webdev.png",
-      price: 10000,
-    },
+    // {
+    //   id: 20,
+    //   courseName: "Web Developer",
+    //   url: "/course logo/webdev.png",
+    //   price: 10000,
+    // },
     {
       id: 21,
       courseName: "Statistician",
