@@ -634,7 +634,7 @@ const Home = () => {
                 src="https://storage.googleapis.com/test694/Images/acceptwu-svg.webp"
                 alt="homepointerwu"
               />
-              Live Porjects
+              Live Projects
             </div>
             <div className="home-wu-pointer">
               <img
