@@ -31,7 +31,7 @@ const alumniList = [
   },
   {
     name: "Shubham Bhosale",
-    image: "/alumini/shubham bhosale.jpg",
+    image: "/alumini/shubhambhosale.jpeg",
     position: "Program Associate ",
     testimonial:
       "AIS provided me with the right skills and confidence to excel in my career. The projects and mentorship were top-notch.",
