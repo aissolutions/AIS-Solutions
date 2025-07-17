@@ -34,7 +34,7 @@ const Navbar = () => {
           </h1>
         </div>
       </div>
-{/*       <div className="nav-hover-btn2"></div> */}
+      <div className="nav-hover-btn2"></div>
     </div>
   );
 };
