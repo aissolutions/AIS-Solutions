@@ -23,7 +23,7 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-  animation: floating-circular 3s linear infinite;
+/*   animation: floating-circular 3s linear infinite; */
 }
 
 .settings-btn:active {
