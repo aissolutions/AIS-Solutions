@@ -270,7 +270,7 @@ span.navname {
   width: 100%;
 }
 
-.nav-hover-btn2:before {
+/* .nav-hover-btn2:before {
   animation: glare 5s infinite;
   background: #ffffffd5;
   content: "";
@@ -282,7 +282,7 @@ span.navname {
   transform: skew(-45deg);
   transition: all 2s;
   width: 30px;
-}
+} */
 
 .nav-hover-btn2 {
   background: linear-gradient(7deg, #ffc011 0%, #305078 100%);
