@@ -234,7 +234,7 @@ span.navname {
   text-shadow: 2px 2px 4px rgba(1, 1, 1, 0.1);
 }
 
-.nav-hover-btn:before {
+/* .nav-hover-btn:before {
   animation: glare 3s infinite;
   background: #ffffffd5;
   content: "";
@@ -246,7 +246,7 @@ span.navname {
   transform: skew(-45deg);
   transition: all 2s;
   width: 30px;
-}
+} */
 
 .nav-hover-btn {
   background: linear-gradient(7deg, #ff9b16 0%, #305078 100%);
