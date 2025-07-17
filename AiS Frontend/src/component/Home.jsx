@@ -503,7 +503,7 @@ const Home = () => {
                   </div>
                   <div className="home-hero-cta-cont">
                     <a href="#courses">
-                      <div className="home-hero-cta home-enroll-btn">
+                      <div className="home-hero-cta">
                         Explore Courses
                       </div>
                     </a>
