@@ -372,7 +372,7 @@ const Home = () => {
             navigate("/internship");
           }}
         >
-          Apply For Internship
+          Enquiry
         </div>
       </>
     );
