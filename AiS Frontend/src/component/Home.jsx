@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
+import { useLocation, useNavigate } from "react-router-dom";
+
+import { sendEnquiry } from "../api/formApi";
 
 import "./Home.css";
-import { useNavigate } from "react-router-dom";
 import ComboPack from "./ComboPack";
 import LollipopBarChart from "./LollipopBarChart";
 import Testimonial from "./Testimonial";
@@ -97,6 +99,97 @@ const Home = () => {
   const [learnersCount, learnersRef] = useCountUpOnVisible(5000);
   const [internsCount, internsRef] = useCountUpOnVisible(11000);
   const [networkCount, networkRef] = useCountUpOnVisible(220);
+
+  const [showModal, setShowModal] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+  });
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  // Form Validations
+  const [errors, setErrors] = useState({});
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Name: only letters and spaces
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required.";
+    } else if (!/^[a-zA-Z\s]+$/.test(form.name)) {
+      newErrors.name = "Name can only contain letters.";
+    }
+
+    // Email
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = "Invalid email format.";
+    }
+
+    // Phone: only digits, 10 characters
+    if (!form.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(form.phone)) {
+      newErrors.phone = "Phone number must be 10 digits.";
+    }
+
+    // Address
+    if (!form.address.trim()) {
+      newErrors.address = "Address is required.";
+    } else if (form.address.length < 5) {
+      newErrors.address = "Address must be at least 5 characters.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  // Disable scroll when modal is open
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showModal]);
+
+  const location = useLocation();
+  const course = location.state;
+
+  const handleInputChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    try {
+      await sendEnquiry({
+        ...form,
+        course: course?.courseName || "Internship",
+      });
+      setSending(false);
+      setSuccess(true);
+      setTimeout(() => {
+        setShowModal(false);
+        setSuccess(false);
+        setForm({ name: "", email: "", phone: "", address: "" });
+      }, 2000);
+    } catch (err) {
+      setSending(false);
+      alert("Failed to send. Please try again.");
+    }
+  };
 
   const dataScience = [
     {
@@ -363,13 +456,13 @@ const Home = () => {
               <div>{item.courseName}</div>
               <p>{item.msg}</p>
             </div>
-          ))}
+          ))}   
         </div>
         <div
           className="hero-enroll-btn"
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
-            navigate("/internship");
+            setShowModal(true);
           }}
         >
           Enquiry
@@ -407,7 +500,7 @@ const Home = () => {
   }
 
   return (
-    <>
+    <div className={showModal ? "blurred-bg" : ""}>
       <div id="root">
         <div>
           <Helmet>
@@ -503,9 +596,7 @@ const Home = () => {
                   </div>
                   <div className="home-hero-cta-cont">
                     <a href="#courses">
-                      <div className="home-hero-cta">
-                        Explore Courses
-                      </div>
+                      <div className="home-hero-cta">Explore Courses</div>
                     </a>
                     <div className="home-hero-cta-vid pointer"></div>
                   </div>
@@ -846,6 +937,88 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {showModal && (
+          <div
+            className="enroll-modal-overlay"
+            onClick={() => setShowModal(false)}
+            tabIndex={-1}
+            aria-modal="true"
+            role="dialog"
+          >
+            <div
+              className="enroll-modal"
+              onClick={(e) => e.stopPropagation()}
+              role="document"
+            >
+              <button
+                className="enroll-modal-close"
+                onClick={() => setShowModal(false)}
+                aria-label="Close"
+                type="button"
+              >
+                {/* &times;
+                 */}
+                X
+              </button>
+              <h2>Enroll Now</h2>
+              {success ? (
+                <div className="enroll-success">
+                  Thank you! Your enrollment was submitted.
+                </div>
+              ) : (
+                <form
+                  onSubmit={handleSubmit}
+                  className="enroll-form"
+                  autoComplete="off"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={form.name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  {errors.name && <p className="error">{errors.name}</p>}
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={form.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  {errors.email && <p className="error">{errors.email}</p>}
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={form.phone}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  {errors.phone && <p className="error">{errors.phone}</p>}
+
+                  <input
+                    type="text"
+                    name="address"
+                    placeholder="Address"
+                    value={form.address}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  {errors.address && <p className="error">{errors.address}</p>}
+
+                  <button type="submit" disabled={sending}>
+                    {sending ? "Sending..." : "Send Request"}
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        )}
       </div>
       <Founder />
       <Alumini />
@@ -854,7 +1027,7 @@ const Home = () => {
       <Faq />
       <Gallery />
       <Map />
-    </>
+    </div>
   );
 };
 

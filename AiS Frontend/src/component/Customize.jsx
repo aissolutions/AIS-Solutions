@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import "./Customize.css";
+import { sendEnquiry } from "../api/formApi";
+
 import emailjs from "@emailjs/browser"; // Make sure this is installed
 
 const Customize = () => {
@@ -208,42 +210,25 @@ const Customize = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    // Get selected course names
-    const selectedCourseNames = courses
-      .filter((c) => selected.includes(c.id))
-      .map((c) => c.courseName)
-      .join(", ");
-    emailjs
-      .send(
-        "service_8box73l", // replace with your EmailJS service ID
-        "template_w2zq6tv", // replace with your EmailJS template ID
-        {
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          address: form.address,
-          course: selectedCourseNames,
-        },
-        "jiPuGmUXUUghKcaJA" // replace with your EmailJS public key
-      )
-      .then(
-        () => {
-          setSending(false);
-          setSuccess(true);
-          setTimeout(() => {
-            setShowModal(false);
-            setSuccess(false);
-            setForm({ name: "", email: "", phone: "", address: "" });
-          }, 2000);
-        },
-        () => {
-          setSending(false);
-          alert("Failed to send. Please try again.");
-        }
-      );
+    try {
+      await sendEnquiry({
+        ...form,
+        course: course?.courseName || "",
+      });
+      setSending(false);
+      setSuccess(true);
+      setTimeout(() => {
+        setShowModal(false);
+        setSuccess(false);
+        setForm({ name: "", email: "", phone: "", address: "" });
+      }, 2000);
+    } catch (err) {
+      setSending(false);
+      alert("Failed to send. Please try again.");
+    }
   };
 
   return (
