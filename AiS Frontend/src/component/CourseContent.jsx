@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import ais2img from "../assets/ais2img.png";
 import emailjs from "@emailjs/browser"; // npm install @emailjs/browser
 import "./CourseContent.css";
+import { sendEnquiry } from "../api/formApi";
 
 function CourseContent() {
   const navigate = useNavigate();
@@ -88,43 +89,26 @@ function CourseContent() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (validateForm()) {
-        setSending(true);
-        emailjs
-          .send(
-            "service_8box73l", // replace with your EmailJS service ID
-            "template_w2zq6tv", // replace with your EmailJS template ID
-            {
-              name: form.name,
-              email: form.email,
-              phone: form.phone,
-              address: form.address,
-              course: course?.courseName || "",
-            },
-            "jiPuGmUXUUghKcaJA" // replace with your EmailJS public key
-          )
-          .then(
-            () => {
-              setSending(false);
-              setSuccess(true);
-              setTimeout(() => {
-                setShowModal(false);
-                setSuccess(false);
-                setForm({ name: "", email: "", phone: "", address: "" });
-              }, 2000);
-            },
-            () => {
-              setSending(false);
-              alert("Failed to send. Please try again.");
-            }
-          );
-      }
-    },
-    [form, course]
-  );
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    try {
+      await sendEnquiry({
+        ...form,
+        course: course?.courseName || "",
+      });
+      setSending(false);
+      setSuccess(true);
+      setTimeout(() => {
+        setShowModal(false);
+        setSuccess(false);
+        setForm({ name: "", email: "", phone: "", address: "" });
+      }, 2000);
+    } catch (err) {
+      setSending(false);
+      alert("Failed to send. Please try again.");
+    }
+  };
 
   if (!course) {
     return <div>No course data available.</div>;
