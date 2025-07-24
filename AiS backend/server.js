@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Replace with your actual connection string and database name
 mongoose.connect(
-  "mongodb+srv://AIS:AIS12345@aisdb.jlnbwem.mongodb.net/aisdb?retryWrites=true&w=majority&appName=AISDB"
+  "mongodb+srv://AIS:AIS12345@aisdb.jlnbwem.mongodb.net/?retryWrites=true&w=majority&appName=AISDB"
 );
 
 // Define schema and model
