@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.10",
     "framer-motion": "^12.19.2",
     "mongodb": "^6.18.0",

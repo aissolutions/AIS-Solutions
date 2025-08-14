@@ -45,13 +45,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="tutedude-footer-registered-section">
-          <p className="tutedude-footer-link-head"> Office</p>
+          <p className="tutedude-footer-link-head"> Office Address</p>
           <p className="tutedude-footer-link">
-            Office No 2, 1st Floor, Kudale Patil Palace
-            <br />
-            Sinhgad Rd, near SS store, Bramha Hotel, Manikbag, Pune,
-            <br />
-            Maharashtra, 411051
+            OFFICE 2, 1ST FLOOR, ANAND SAGAR, NEAR NATURALS, <br /> SINHGAD
+            ROAD, PUNE.
           </p>
           <div className="tutedude-footer-contact-section">
             <p className="tutedude-footer-link-head">Contact Us</p>
