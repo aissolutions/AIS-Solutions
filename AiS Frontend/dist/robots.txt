@@ -1,4 +1,3 @@
+Sitemap: https://appliedinsights.in/sitemap.xml
 User-agent: *
 Allow: /
-
-Sitemap: https://appliedinsights.in/sitemap.xml
