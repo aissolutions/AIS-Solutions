@@ -2,20 +2,6 @@ import { useState } from "react";
 import "./ComboPack.css";
 import { useNavigate } from "react-router-dom";
 
-const AnimatedText = ({ text }) => (
-  <span className="snake-anim-text">
-    {text.split("").map((char, i) => (
-      <div
-        key={i}
-        className="snake-char"
-        style={{ animationDelay: `${i * 0.01}s` }}
-      >
-        {char === " " ? "\u00A0" : char}
-      </div>
-    ))}
-  </span>
-);
-
 // Reusable ComboCardSlider component
 const ComboCardSlider = ({
   comboKey,
@@ -26,7 +12,8 @@ const ComboCardSlider = ({
   courses,
   extraBenefits,
   total,
-  discount,
+  onetimepay,
+  twoinstallmentpay,
   colorClass = "",
 }) => (
   <div className="card-slider-container">
@@ -85,15 +72,18 @@ const ComboCardSlider = ({
             </div>
           </div>
           <div
-            className="afternoon-bottom-know pointer"
-            onMouseEnter={() => setShow(comboKey)}
+            className="afternoon-bottom-know"
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
           >
-            <div className="combo-total">Total: {total}</div>
-            <div className="combo-pop-text">
-              <AnimatedText text="See Spacial Offer" />
+            <div className=" pointer">
+              Total: <h2 className="combo-total"> {total}</h2>
             </div>
-
-            {/* <p>See Discounted Price</p> */}
+            <div className=" pointer" onMouseEnter={() => setShow(comboKey)}>
+              <div className="combo-pop-text">See Special Offer</div>
+            </div>
           </div>
         </div>
       </div>
@@ -139,27 +129,21 @@ const ComboCardSlider = ({
                   {item.courseName}
                 </p>
               </div>
-              <div>
-                {" "}
-                <span className="combo-total">{item.price}/-</span>{" "}
-                <div>6,000/-</div>
-              </div>
-              {/* <div>6000/-</div> */}
             </div>
           ))}
         </div>
+
         <div
-          className="combo-slider-middle-bottom"
+          className="afternoon-bottom-know"
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+          }}
           onClick={() => setShow(null)}
         >
-          <div
-            className="afternoon-bottom-know pointer"
-            style={{ backgroundColor: "white", color: "black" }}
-          >
-            <span className="combo-span ">
-              Total: &nbsp; <div className="combo-total-hover">{total}</div>/-
-            </span>
-            <b>Price After Discount {discount}/-</b>
+          <div className=" pointer">
+            <h3 className=""> With One Time Payment : {onetimepay}/- </h3>
+            <h3 className="">With Two Installments : {twoinstallmentpay}/- </h3>
           </div>
         </div>
       </div>
@@ -269,7 +253,8 @@ const ComboPack = () => {
             courses={dataAnalyticsCombo}
             extraBenefits={extraBenefits}
             total="40,000"
-            discount="24,000"
+            onetimepay="25,000"
+            twoinstallmentpay="30,000"
             colorClass="purple font-white"
           />
           <ComboCardSlider
@@ -281,7 +266,8 @@ const ComboPack = () => {
             courses={aiMLCombo}
             extraBenefits={extraBenefits}
             total="40,000"
-            discount="24,000"
+            onetimepay="25,000"
+            twoinstallmentpay="30,000"
             colorClass="purple font-white"
           />
           <ComboCardSlider
@@ -293,7 +279,8 @@ const ComboPack = () => {
             courses={genAICombo}
             extraBenefits={extraBenefits}
             total="50,000"
-            discount="30,000"
+            onetimepay="30,000"
+            twoinstallmentpay="35,000"
             colorClass="purple font-white"
           />
         </div>
