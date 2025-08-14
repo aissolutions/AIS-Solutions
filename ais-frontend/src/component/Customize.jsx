@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import "./Customize.css";
-import { sendEnquiry } from "../api/formApi";
-
-import emailjs from "@emailjs/browser"; // Make sure this is installed
+import { sendEnquiry } from "../api/formApi"; // Make sure this is installed
 
 const Customize = () => {
   const courses = [
