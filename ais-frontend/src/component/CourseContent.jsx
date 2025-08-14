@@ -1,7 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
-import ais2img from "../assets/ais2img.png";
-import emailjs from "@emailjs/browser"; // npm install @emailjs/browser
+import ais2img from "../assets/ais2img.png"; 
 import "./CourseContent.css";
 import { sendEnquiry } from "../api/formApi";
 
