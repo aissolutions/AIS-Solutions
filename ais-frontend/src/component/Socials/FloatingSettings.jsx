@@ -35,6 +35,17 @@ const socials = [
     ),
     url: "https://wa.me/919765707273?text=Hey%20AIS%20%7C%20Applied%20Insights%2C%20can%20you%20share%20more%20details%20about%20the%20course%3F ",
   },
+  {
+    name: "Phone",
+    icon: (
+      <img
+        src="/course logo/mobile.png"
+        alt="Phone"
+        style={{ width: 28, height: 28, borderRadius: "50%" }}
+      />
+    ),
+    url: "tel:+919765707273",
+  },
 ];
 
 const FloatingSettings = () => {
