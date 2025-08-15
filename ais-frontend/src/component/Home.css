@@ -308,6 +308,8 @@ span {
   font-weight: 600;
 }
 
+
+
 .hd-tb-td {
   font-size: 19px;
   font-weight: 700;
@@ -694,7 +696,9 @@ span {
   }
 
   .home-hero-main-btm {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 20px;
   }
@@ -738,13 +742,13 @@ span {
   .hd-tb {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    height: 65px;
   }
 
   .hd-tb-td {
     width: 100%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .hd-tb-head {
     font-size: 1.34rem;
@@ -944,7 +948,6 @@ span {
   }
 
   .hd-tb {
-    gap: 12px;
     display: flex;
     flex-direction: row;
   }
