@@ -59,7 +59,7 @@ const alumniList = [
   {
     name: "Suraj Dhumal",
     image: "/alumini/surajdhumal.jpeg",
-    position: "Data Analyst",
+    position: "Sr. Analyst",
     testimonial:
       "Hands-on projects helped me gain confidence in my skills. The community is very encouraging and helpful.",
     logo: "/alumini/demandbase.png",

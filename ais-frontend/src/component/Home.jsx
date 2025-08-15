@@ -641,7 +641,7 @@ const Home = () => {
                   alt="hero-img"
                 />
                 <div className="home-hero-card-det" ref={networkRef}>
-                  {networkCount}+<p className="institute">Industry Network </p>
+                  {networkCount}+<p className="institute"> Network </p>
                 </div>
               </div>
             </div>
@@ -769,18 +769,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+            
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">HR Team For Placement</div>
@@ -790,18 +779,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+              
             </div>
 
             <div className="hd-tb">
@@ -814,18 +792,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+             
             </div>
 
             <div className="hd-tb">
@@ -838,18 +805,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+             
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Instant Doubt Solving</div>
@@ -859,18 +815,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+             
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Personal Mentorship</div>
@@ -880,18 +825,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+          
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Dedicated Projects</div>
@@ -901,18 +835,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+             
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Internship</div>
@@ -922,18 +845,7 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              {/* <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div>
-              <div className="hd-tb-td hd-tick">
-                <img
-                  src="https://storage.googleapis.com/test694/Images/present-svg.webp"
-                  alt="logo"
-                />
-              </div> */}
+              
             </div>
           </div>
         </div>

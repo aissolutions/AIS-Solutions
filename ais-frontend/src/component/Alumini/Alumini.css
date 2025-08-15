@@ -57,6 +57,10 @@
   margin-bottom: 10px;
   position: relative;
 }
+.alumini-carousel-outer:hover .alumini-carousel-inner,
+.alumini-carousel-inner:hover {
+  animation-play-state: paused !important;
+}
 
 .stylish-card > div {
   width: 100%;
