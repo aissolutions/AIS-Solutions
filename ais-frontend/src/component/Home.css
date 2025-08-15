@@ -708,6 +708,14 @@ span {
     margin-bottom: 20px;
     text-align: center;
   }
+    .home-hero-card {
+    width: 100%;
+  }
+
+  .home-hero-card img {
+    width: 80px !important;
+    height: 80px !important;
+  }
 
   .bc-mid {
     flex-direction: column;
@@ -830,7 +838,12 @@ span {
   }
 
   .home-hero-card {
-    width: 90%;
+    width: 100%;
+  }
+
+  .home-hero-card img {
+    width: 60px !important;
+    height: 60px !important;
   }
 
   .bc-mid-chip {
