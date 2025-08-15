@@ -23,7 +23,7 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-/*   animation: floating-circular 3s linear infinite; */
+  /*   animation: floating-circular 3s linear infinite; */
 }
 
 .settings-btn:active {
@@ -89,6 +89,10 @@
 .floating-settings.open .social-btn-2 {
   transition-delay: 0.25s;
   transform: translate(10px, -80px) scale(1.1);
+}
+.floating-settings.open .social-btn-3 {
+  transition-delay: 0.25s;
+  transform: translate(-70px, 50px) scale(1.1);
 }
 
 .floating-settings .social-btn:hover {

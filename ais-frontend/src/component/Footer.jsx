@@ -65,7 +65,7 @@ const Footer = () => {
                 href="tel:+91 9975707273"
               >
                 <img src="/social/phone.png" alt="" />
-                +91 9975707273
+                +91 9765707273
               </a>
             </div>
           </div>
