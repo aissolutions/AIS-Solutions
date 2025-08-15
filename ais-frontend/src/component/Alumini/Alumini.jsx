@@ -189,9 +189,15 @@ const Alumini = () => (
           <div className="alumini-card stylish-card" key={`slider1-${idx}`}>
             <div className="alumini-card-header">
               <div className="alumini-img-wrapper">
-                <img src={alum.image} alt={alum.name} className="alumini-img" />
+                <img
+                  src={alum.image}
+                  alt={alum.name}
+                  loading="lazy"
+                  className="alumini-img"
+                />
                 <img
                   src={alum.logo}
+                  loading="lazy"
                   alt=""
                   className="alumini-logo-inlin"
                   style={{
@@ -221,8 +227,14 @@ const Alumini = () => (
           <div className="alumini-card stylish-card" key={`slider2-${idx}`}>
             <div className="alumini-card-header">
               <div className="alumini-img-wrapper">
-                <img src={alum.image} alt={alum.name} className="alumini-img" />
                 <img
+                  src={alum.image}
+                  alt={alum.name}
+                  loading="lazy"
+                  className="alumini-img"
+                />
+                <img
+                  loading="lazy"
                   src={alum.logo}
                   alt=""
                   className="alumini-logo-inlin"

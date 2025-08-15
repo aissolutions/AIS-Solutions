@@ -6,4 +6,10 @@
   .ques {
     color: black;
   }
+  .ans > h4 {
+    font-size: 1rem;  
+  }
+  .ans {
+    padding: 1rem;
+  }
 }
