@@ -460,9 +460,24 @@
 
 @media (max-width: 1024px) {
   .cardssss-cont {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    gap: 0;
+    padding-bottom: 16px;
+  }
+  .card-slider-container {
+    min-width: 90vw;
+    max-width: 90vw;
+    flex: 0 0 90vw;
+    scroll-snap-align: center;
+    margin-right: 16px;
+  }
+  .combo-card,
+  .afternoon-card {
+    min-height: 480px;
   }
 
   .combo-card,
@@ -481,6 +496,8 @@
     width: 45%;
     margin: 5px 0;
   }
+  .card-slider-container {
+  }
 
   .combo-slider-middle-top .priceCombo {
     flex-direction: column;
@@ -490,6 +507,8 @@
   .afternoon-bottom-know {
     font-size: 0.9rem;
     z-index: 1000;
+    border-radius: 22px;
+    margin-bottom: 2rem;
   }
 }
 
