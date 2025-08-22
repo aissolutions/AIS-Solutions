@@ -1,9 +1,4 @@
-.card-slider-container {
-  position: relative;
-  width: 100%;
-  min-height: 540px;
-  margin-bottom: 32px;
-}
+
 
 .combo-card {
   display: grid;
@@ -19,7 +14,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 27vw;
   opacity: 0;
   pointer-events: none;
   transform: translateY(100%);
@@ -139,10 +134,7 @@
   justify-content: space-between;
   gap: 20.99px;
 }
-.cardssss-cont {
-  width: 90%;
-  overflow: hidden;
-}
+
 
 .afternoon-card-heading {
   align-items: center;
@@ -157,7 +149,7 @@
 }
 .combo-middle {
   display: grid;
-  grid-template-rows: 173px 60%;
+  grid-template-rows: 200px 60%;
   justify-content: space-between;
 }
 .combo-middle-top {
@@ -450,6 +442,24 @@
   color: #ccc;
 }
 
+.cardssss-cont {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;        
+  overflow-y: hidden;
+  /* scroll-snap-type: x mandatory; */
+  width: 90vw;
+  height: 650px;
+  padding-bottom: 16px;
+}
+
+.card-slider-container {
+  min-width: 28vw;
+  max-width: 28vw;
+  flex: 0 0 28vw;
+  /* scroll-snap-align: start; */
+  position: relative;
+}
 /* Optional: discounted-price button */
 .discounted-price {
   background-color: white;
@@ -478,6 +488,7 @@
   .combo-card,
   .afternoon-card {
     min-height: 480px;
+    width: 90vw;
   }
 
   .combo-card,

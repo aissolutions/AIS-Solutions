@@ -179,6 +179,46 @@ const ComboPack = () => {
     },
   ];
 
+  const masterDataScienceCombo = [
+    {
+      id: 1,
+      courseName: "Machine Learning",
+      url: "/course logo/aiml.png",
+      price: 10000,
+    },
+    {
+      id: 2,
+      courseName: "Deep Learning",
+      url: "/course logo/deep.png",
+      price: 10000,
+    },
+    { id: 3, courseName: "NLP", url: "/course logo/nlp.png", price: 10000 },
+    {
+      id: 4,
+      courseName: "Python",
+      url: "/course logo/python.png",
+      price: 10000,
+    },
+    {
+      id: 5,
+      courseName: "Power BI",
+      url: "/course logo/powerbi.png",
+      price: 10000,
+    },
+    {
+      id: 6,
+      courseName: "SQL",
+      url: "/course logo/sql.png",
+      price: 10000,
+    },
+    {
+      id: 7,
+      courseName: "Excel",
+      url: "/course logo/excel.png",
+      price: 10000,
+    },
+  ];
+
   const aiMLCombo = [
     {
       id: 1,
@@ -268,6 +308,19 @@ const ComboPack = () => {
             total="40,000"
             onetimepay="25,000"
             twoinstallmentpay="30,000"
+            colorClass="purple font-white"
+          />
+          <ComboCardSlider
+            comboKey="masterDataScience"
+            show={show}
+            setShow={setShow}
+            mainTitle="Master Data Science Combo Pack"
+            mainImg="https://storage.googleapis.com/test694/Images/Main2.webp"
+            courses={masterDataScienceCombo}
+            extraBenefits={extraBenefits}
+            total="70,000"
+            onetimepay="5,000"
+            twoinstallmentpay="60,000"
             colorClass="purple font-white"
           />
           <ComboCardSlider
