@@ -319,7 +319,7 @@ const ComboPack = () => {
             courses={masterDataScienceCombo}
             extraBenefits={extraBenefits}
             total="70,000"
-            onetimepay="5,000"
+            onetimepay="50,000"
             twoinstallmentpay="60,000"
             colorClass="purple font-white"
           />
