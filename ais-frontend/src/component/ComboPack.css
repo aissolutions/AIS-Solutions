@@ -485,10 +485,28 @@
     scroll-snap-align: center;
     margin-right: 16px;
   }
+  .combo-middle {
+    display: grid;
+    grid-template-rows: 220px 60%;
+    justify-content: space-between;
+  }
+  .combo-middle-top{
+    gap: 4px;
+  }
+  .afternoon-bottom-validity-para{
+    margin: 0;
+  }
+  .combo-bottom {
+    display: flex
+;
+    flex-direction: column;
+    gap: 10px;
+  }
   .combo-card,
   .afternoon-card {
     min-height: 480px;
     width: 90vw;
+    height: 630px;
   }
 
   .combo-card,
@@ -506,6 +524,7 @@
   .afternoon-card-company {
     width: 45%;
     margin: 5px 0;
+    margin-left: 15px;
   }
   .card-slider-container {
   }
