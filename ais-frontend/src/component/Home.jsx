@@ -456,7 +456,7 @@ const Home = () => {
               <div>{item.courseName}</div>
               <p>{item.msg}</p>
             </div>
-          ))}   
+          ))}
         </div>
         <div
           className="hero-enroll-btn"
@@ -594,11 +594,20 @@ const Home = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="home-hero-cta-cont">
-                    <a href="#courses">
-                      <div className="home-hero-cta">Explore Courses</div>
+                  <div className="home-hero-cta-cont ">
+                    <a href="#courses" className="addtwobtn">
+                      <div className="home-hero-cta addtwobtn">
+                        Explore Courses
+                      </div>
                     </a>
-                    <div className="home-hero-cta-vid pointer"></div>
+                    <a
+                      href="https://quiz-module.vercel.app/"
+                      className="addtwobtn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="home-hero-cta addtwobtn">Quiz App</div>
+                    </a>
                   </div>
                 </div>
                 <div className="home-hero-right">
@@ -769,7 +778,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-            
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">HR Team For Placement</div>
@@ -779,7 +787,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              
             </div>
 
             <div className="hd-tb">
@@ -792,7 +799,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-             
             </div>
 
             <div className="hd-tb">
@@ -805,7 +811,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-             
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Instant Doubt Solving</div>
@@ -815,7 +820,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-             
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Personal Mentorship</div>
@@ -825,7 +829,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-          
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Dedicated Projects</div>
@@ -835,7 +838,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-             
             </div>
             <div className="hd-tb">
               <div className="hd-tb-td hd-first-w">Internship</div>
@@ -845,7 +847,6 @@ const Home = () => {
                   alt="logo"
                 />
               </div>
-              
             </div>
           </div>
         </div>

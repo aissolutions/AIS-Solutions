@@ -308,8 +308,6 @@ span {
   font-weight: 600;
 }
 
-
-
 .hd-tb-td {
   font-size: 19px;
   font-weight: 700;
@@ -626,7 +624,7 @@ span {
   transition-delay: 0.15s;
 }
 .home-hero-cta-cont > a {
-  width: 60%;
+  width: 50%;
 }
 
 .fab-action-btn img {
@@ -650,6 +648,11 @@ span {
 
 .fab-action-btn {
   background: transparent;
+}
+.addtwobtn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* ========== Responsive Styling for Tablet Devices (max-width: 768px) ========== */
@@ -708,7 +711,7 @@ span {
     margin-bottom: 20px;
     text-align: center;
   }
-    .home-hero-card {
+  .home-hero-card {
     width: 100%;
   }
 
