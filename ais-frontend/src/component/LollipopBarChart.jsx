@@ -60,7 +60,7 @@ const LollipopBarChart = () => {
   }, [heights]);
 
   return (
-    <div className="lollipopbar-chart-outer">
+    <div className="lollipopbar-chart-outer p-24">
       <br />
       <div className="lollipopbar-title">Go Applied , Get Insights... </div>
       <div className="lolipopbar-tagline">Together we achieve more...</div>
