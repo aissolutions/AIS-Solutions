@@ -117,7 +117,7 @@ const ComboCardSlider = ({
           {courses.map((item) => (
             <div className="priceCombo" key={item.id}>
               <div className="afternoon-card-company">
-                <div className="afternoon-card-company-img">
+                <div className="afternoon-card-company-img w-9">
                   <img src={item.url} alt={item.courseName} />
                 </div>
                 <p
@@ -293,8 +293,8 @@ const ComboPack = () => {
             courses={dataAnalyticsCombo}
             extraBenefits={extraBenefits}
             total="40,000"
-            onetimepay="25,000"
-            twoinstallmentpay="30,000"
+            onetimepay="30,000"
+            twoinstallmentpay="35,000"
             colorClass="purple font-white"
           />
           <ComboCardSlider
@@ -332,8 +332,8 @@ const ComboPack = () => {
             courses={genAICombo}
             extraBenefits={extraBenefits}
             total="50,000"
-            onetimepay="30,000"
-            twoinstallmentpay="35,000"
+            onetimepay="35,000"
+            twoinstallmentpay="40,000"
             colorClass="purple font-white"
           />
         </div>

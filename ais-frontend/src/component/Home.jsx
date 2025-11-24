@@ -498,10 +498,237 @@ const Home = () => {
       </>
     );
   }
+  const [ourSoft, setOurSoft] = useState(false);
+  // Disable scroll when any modal is open
+
+  function OurSoftModal() {
+    const navigate = useNavigate();
+    return (
+      <div
+        className="fixed inset-0 z-10 w-100 flex items-center justify-center bg-transparent bg-opacity-50 backdrop-blur-sm"
+        onClick={() => {
+          setOurSoft(false);
+        }}
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          className="relative z-50 w-fit h-100 rounded-lg bg-white shadow-lg   transform transition-all"
+          onClick={(e) => e.stopPropagation()}
+          style={{ padding: "1rem" }}
+        >
+          <div className="grid grid-cols-12 justify-between align-middle content-center">
+            <p className=" text-4xl ml-14 col-span-12 center font-semibold text-gray-800">
+              Our Softwares
+            </p>
+
+            <svg
+              onClick={() => {
+                setOurSoft(false);
+              }}
+              className=" text-red-600 absolute right-3.5 hover:text-gray-900 mt-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm7.707-3.707a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586 9.707 8.293Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div className="flex gap-7 justify-center w-full ">
+            <div className=" flex flex-col  bg-white  border border-gray-200 shadow-2xs rounded-xl ">
+              <p className=" text-lg relative top-1">QuizHub Portal</p>
+              <div className="flex flex-col justify-start">
+                <div className="flex content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    Practice quizzes and tests anytime
+                  </p>
+                </div>
+                <div className="flex content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    Instant score and performance tracking
+                  </p>
+                </div>
+                <div className="flex justify-start content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    Topic-wise and full-length practice
+                  </p>
+                </div>
+                <div className="flex content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    Simple and user-friendly interface
+                  </p>
+                </div>
+                <div className="flex content-center w-full justify-center ">
+                  <div
+                    className="w-1/2 text-center cursor-pointer"
+                    onClick={() => {
+                      window.open(
+                        "https://quiz-module.vercel.app/",
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }}
+                  >
+                    <button className="flex w-full justify-center content-center text-center bg-neutral-secondary-medium box-border border border-gray-200 bg-blue-300 hover:bg-blue-400  hover:text-heading  shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5">
+                      <p className="w-full text-lg">Quiz Hub</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex flex-col bg-white  border border-gray-200  rounded-xl ">
+              <p className=" text-lg relative top-1">SkillHub Portal</p>
+              <div className="flex flex-col justify-start">
+                <div className="flex content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    Access class recordings anytime
+                  </p>
+                </div>
+                <div className="flex content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    Download notes and learning material
+                  </p>
+                </div>
+                <div className="flex justify-start content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    View fee details and payment status
+                  </p>
+                </div>
+                <div className="flex content-center">
+                  <svg
+                    class="w-4 h-4 text-black-800 dark:black-white p-0 m-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                  </svg>
+
+                  <p className=" content-center">
+                    Check daily schedules & class updates
+                  </p>
+                </div>
+                <div className="flex content-center w-full justify-center ">
+                  <div
+                    className="w-1/2 text-center cursor-pointer"
+                    onClick={() => {
+                      window.open(
+                        "https://ais-solutions.vercel.app/",
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }}
+                  >
+                    <button className="flex w-full justify-center content-center text-center bg-neutral-secondary-medium box-border border border-gray-200 hover:bg-purple-500 bg-purple-400  hover:text-heading  shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5">
+                      <p className="w-full text-lg">Skill Hub</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className={showModal ? "blurred-bg" : ""}>
-      <div id="root">
+    <div>
+      <div id="root" className={ourSoft ? "filter backdrop-blur-sm" : ""}>
         <div>
           <Helmet>
             <title>
@@ -518,8 +745,8 @@ const Home = () => {
             <link rel="canonical" href="https://appliedinsights.in/" />
           </Helmet>
           <div className="home-hero-cont">
-            <div className="home-hero-main-cont">
-              <div className="home-hero-main-top">
+            <div className="home-hero-main-cont ">
+              <div className="home-hero-main-top gap-5">
                 <div className="home-hero-left">
                   <div className="home-hero-head">
                     <p className="home-hero-head-col">
@@ -594,20 +821,26 @@ const Home = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="home-hero-cta-cont ">
-                    <a href="#courses" className="addtwobtn">
-                      <div className="home-hero-cta addtwobtn">
+                  <div
+                    className="flex w-full gap-7 justify-items-start content-start justify-self-start"
+                    style={{ marginBottom: "5rem" }}
+                  >
+                    <a href="#courses" className="addtwobtn w-1/3">
+                      <div className="home-hero-cta addtwobtn ">
                         Explore Courses
                       </div>
                     </a>
-                    <a
-                      href="https://quiz-module.vercel.app/"
-                      className="addtwobtn"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      type="button"
+                      className="addtwobtn w-1/3"
+                      onClick={() => {
+                        setOurSoft(true);
+                      }}
                     >
-                      <div className="home-hero-cta addtwobtn">Quiz App</div>
-                    </a>
+                      <div className="home-hero-cta addtwobtn ">
+                        Our Softwares
+                      </div>
+                    </button>
                   </div>
                 </div>
                 <div className="home-hero-right">
@@ -940,6 +1173,7 @@ const Home = () => {
       <Faq />
       <Gallery />
       <Map />
+      {ourSoft && <OurSoftModal />}
     </div>
   );
 };
