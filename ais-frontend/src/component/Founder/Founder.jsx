@@ -167,7 +167,9 @@ const Founder = () => {
             <div className="lining"></div>
           </div>
           <div className="founder-name">
-            <h2>Mr. Prajyot Patil</h2>{" "}
+            <h2>Dr .Prajyot Patil (PhD in Data Science & Artificial Intelligence)</h2>{" "}
+            <span>(Honarary degree from Louisiana University, USA , America )</span>
+            
             <span>
               {" "}
               Founder & CEO <br />
